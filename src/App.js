@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter,Switch,Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard';
+import ProjectDetails from './components/projects/ProjectDetails';  
 function App() {
 
   return (
@@ -10,9 +11,10 @@ function App() {
     <div >
      <Navbar/>
      <Switch>
-       <Route path='/' component={Dashboard} />
+       <Route path='/' exact component={Dashboard} />
+<Route path='/Project/:id'component={ProjectDetails} />
      </Switch>
-    </div>
+    </div> 
     </BrowserRouter >
   );
 }
